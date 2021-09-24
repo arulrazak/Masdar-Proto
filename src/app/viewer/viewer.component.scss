@@ -1,0 +1,134 @@
+.form-box{
+    width: 24%;
+    height: 70%;
+    position: relative;
+    margin-left: 70%;
+    margin-top: 5%;
+    background: white;
+    padding: 5px;
+    overflow: hidden;
+    // box-shadow:0 0 20px 9px #999;
+    bottom: 757px;
+}
+// .location{
+//     margin: 20px 15px;
+//     font-size: 10px;
+//     display: flex;
+// }
+.location-coor{
+    margin-left:10px ;
+}
+.data{
+    display: flex;
+    // float: left;
+    margin: 10px 20px;
+}
+.button-box{
+    width: 220px;
+    margin: 35px;
+    position: relative;
+    // box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+
+}
+.logo{
+    // margin: px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+.function{
+    margin: 25px;
+    align-items: center;
+    display:flex;
+}
+#button{
+    border: 1px outset blue;
+    background-color: lightBlue;
+    height:50px;
+    width:50px;
+    cursor:pointer;
+}
+.button{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px outset;
+    background-color: white;
+    height:76px;
+    width:76px;
+    outline: none;
+    box-shadow: 0 0 4px 0px #999;
+    border-radius: 12px;
+}
+.button::active{
+    transform: scale(0.98); 
+    /* Scaling button to 0.98 to its original size */ 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+    /* Lowering the shadow */ 
+}
+.sitedetails{
+    // text-align: ;
+    margin-left: 25px;
+    
+}
+.annotations{
+    margin:5px 25px;
+    display: flex;
+}
+.dates{
+    margin-left: 10px;
+}
+.share{
+    display: grid;
+    margin-left: 10px
+}
+.delete{
+    display: grid;
+    margin-left: 10px;
+}
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+#login{
+    left: 50px;
+}
+#sign-up{
+    left: 450px;
+}
+#download{
+    margin-left: 10px;
+    padding:4px 6px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}

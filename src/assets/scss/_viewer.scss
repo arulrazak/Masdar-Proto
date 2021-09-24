@@ -1,0 +1,140 @@
+.location {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  .location-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .location-coordinates {
+    padding-left: 20px;
+
+    span {
+      display: block;
+    }
+  }
+  &[aria-expanded='true']::before, &[aria-expanded='false']::after{
+    content:'';
+    position: absolute;
+    top: -8px;
+    right: 0;
+    height: 27px;
+    width: 27px;
+  }
+  &[aria-expanded='true']::before {
+    background-image: url('../icon/up.png');
+  }
+  &[aria-expanded='false']::after {
+    background-image: url('../icon/down.png');
+  }
+}
+.details{
+  display: flex;
+  flex-direction: row;
+  &-table{
+    width: 70%;
+    tr td:first-child{
+      text-align: right;
+      padding-right: 10px;
+    }
+  }
+  &-site-details{
+    text-align: right;
+    width: 30%;
+  }
+}
+.map-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 0;
+
+  .btn {
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    width: 70px;
+
+    &:hover, &.active {
+      box-shadow: 0px 0px 7px 2px rgba($black, 0.2) inset;
+      -webkit-box-shadow: 0px 0px 7px 2px rgba($black, 0.2) inset;
+      -moz-box-shadow: 0px 0px 7px 2px rgba($black, 0.2) inset;
+      background-color: $white !important;
+      border-color: $white !important;
+    }
+    
+    img {
+      width: 30px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+.img-nav{
+  padding: 10px 0 5px;
+  margin: 0 -15px;
+}
+.annotation{
+  .table th, .table td{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .table-hover tbody tr:hover {
+    td{
+      color: #212529;
+      background-color: rgba($theme-color,0.5);
+    }
+    td:first-child{
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    td:last-child{
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  } 
+  .icon-img{
+    width: 12px;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+  } 
+}
+.download-list{
+  font-weight: bold;
+    position: absolute;
+    padding: 10px;
+    background: white;
+    border: 1px solid rgba($black, 0.125);
+    top: 33px;
+    left: -17px;
+  li{
+    margin-right: 15px;
+    &:last-child{
+      float: right;
+      margin-right: 0;
+    }
+  }
+  a{
+    color: inherit;
+    cursor: pointer;
+  }
+  img{
+    width: 12px;
+  }
+}
+.goog-slider-horizontal{
+  display: none;
+}
+#marker-tooltip {
+  display: none;
+  position:absolute;
+  margin: 15px;
+}
+.download{
+  position: relative;
+}

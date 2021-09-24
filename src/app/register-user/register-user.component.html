@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Login</title>
+  
+</head>
+
+
+<body>
+<div class="body" style="background-image:url(assets/image/Masdar_backdrop.png);">
+<div class="form-box">
+<div class="logo">
+  <img src="assets/image/logo_masdar_white.png" alt="" style="width: 200px; height: 100px; margin-left: 70px">
+</div>
+<div class="button-box">
+  <div id="btn"></div>
+  <button type="button" class="toggle-btn" (click)="login()">Log In</button>
+  <button type="button" class="toggle-btn"(click)="signup()">Sign Up</button>
+</div>
+<form id="login" class="input-group"  >
+  <input type="text" class="input-field" placeholder="User Id" required>
+  <input type="text" class="input-field" placeholder="Password" required>
+  <button input type="submit" class="submit-btn" (click)="map()" >Log In</button>
+
+</form>
+<form id="sign-up" class="input-group" >
+  <input type="text" class="input-field" placeholder="User Id" required>
+  <input type="text" class="input-field" placeholder="Email" required>
+  <input type="text" class="input-field" placeholder="Password" required>
+  <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+  <button type="submit" class="submit-btn">Register</button>
+
+</form>
+</div>
+<img src="">
+
+</div>  
+
+</body>
+</html>

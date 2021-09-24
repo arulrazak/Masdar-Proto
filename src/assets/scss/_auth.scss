@@ -1,0 +1,76 @@
+.auth-form {
+  padding: 20px;
+  background: $theme-color;
+  height: 100vh;
+  position: relative;
+  // background: -moz-linear-gradient(left, #1b9bbb 0%, #5bc2dc 97%);
+  // background: -webkit-linear-gradient(left, #1b9bbb 0%, #5bc2dc 97%);
+  // background: linear-gradient(to right, #1b9bbb 0%, #5bc2dc 97%);
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b9bbb', endColorstr='#5bc2dc', GradientType=1);
+  
+  .nav-pills {
+    font-size: 20px;
+    margin: 0 auto 30px;
+    justify-content: space-between;
+
+    .nav-item{
+      width: 40%;
+      text-align: center;
+    }
+    .nav-link{
+      color: $theme-gray;
+      &.active{
+        background-color: $theme-gray;
+        background-color: $theme-gray;
+        color: $white;
+      }
+    }
+  }
+  a{
+    color: $theme-gray;
+  }
+  .form-control{
+    border: 0;
+    outline: none;
+  }
+  @include media-breakpoint-up(md) {
+    padding: 40px;
+    max-width: 540px;
+    padding-top: 20px;
+    margin-left: auto;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 70px;
+    padding-top: 20px;
+  }
+  .custom-control-input:checked ~ .custom-control-label::before{
+    border-color: $theme-gray;
+    background-color:$theme-gray;
+  }
+}
+
+.auth-logo{
+  width: 120px;
+  margin: 0 auto;
+  display: block;
+  @include media-breakpoint-up(md) {
+    width: 370px;
+  }
+}
+.auth-container{
+  background-image: url('../image/masdar_backdrop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: $theme-color;
+}
+.aerodyne-footer{
+  text-align: center;
+  color: $white;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  bottom: 0;
+  font-size: 12px;
+  right: 0;
+}

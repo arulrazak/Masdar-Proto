@@ -1,0 +1,88 @@
+<div class="container">
+  <!-- <div class="map" #mapContainer></div> -->
+<!-- <iframe src="https://aerodyne-masdar-data.s3.me-south-1.amazonaws.com/Processed/Maptiler/Hala-Contour/openlayers.html" class="map" #mapContainer></iframe> -->
+<div id="map" class="map" #mapContainer></div>
+<div id="popup" class="ol-popup">
+    <div id="popup-content"></div>
+  </div>
+
+  
+<div class="card card-list">
+  <div class="card-body p-3">
+    <div class="location" (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
+      <div class="location-title w-60">
+        {{ currentSiteData?.location }}
+      </div>
+      <div class="location-coordinates">
+        <span><b>LAT&nbsp;</b>{{ currentSiteData?.lat }}</span>
+        <span><b>LNG&nbsp;</b>{{ currentSiteData?.lng }}</span>
+      </div>
+    </div>
+    <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
+      <div class="map-type">
+        <button type="button" class="btn btn-light active" (click)="readMaptilerSource(currentSiteData.orthoUrl); activeTabs($event)">
+          <img src="assets/icon/tile.png" alt="ortho">
+          <span>Ortho</span>
+        </button>
+        <button type="button" class="btn btn-light" (click)="readMaptilerSource(currentSiteData.dsmUrl); activeTabs($event)">
+          <img src="assets/icon/dsm.png" alt="Dsm">
+          <span>DSM</span>
+        </button>
+        <button type="button" class="btn btn-light" (click)="loadContour(); activeTabs($event)">
+          <img src="assets/icon/contour.png" alt="Contour">
+          <span>Contour</span>
+        </button>
+        <button type="button" class="btn btn-light" (click)="loadMesh(); activeTabs($event); addBody();">
+          <img src="assets/icon/cube.png" alt="Contour">
+          <span>3D</span>
+        </button>
+  
+      </div>
+      <div class="details">
+        <div class="details-table">
+          <table>
+            <tbody>
+              <tr>
+                <td>Area</td>
+                <td><b>{{ currentSiteData?.area }}<sup>2</sup></b></td>
+              </tr>
+              <tr>
+                <td>Min Elevation</td>
+                <td><b>{{ currentSiteData?.minElevation }}</b></td>
+              </tr>
+              <tr>
+                <td>Max Elevation</td>
+                <td><b>{{ currentSiteData?.maxElevation }}</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="details-site-details">
+          <!-- <small><b>Timeline</b></small> <img class="collapse-icon" src="assets/icon/icon_expand.png" alt="Icon_collapse"> -->
+        </div>
+      </div>
+      <div class="download mt-2" click="download()">
+        <img src="assets/icon/download.png" width="12px" alt="download" (click)="download()">
+        <ul class="list-inline list-unstyled download-list mb-0" *ngIf="isDownload">
+            <li class="list-inline-item">
+              <a (click)="downloadMyFile('tif')">.tiff</a>
+            </li>
+            <li class="list-inline-item">
+              <a (click)="downloadMyFile('.dsm')">.dsm</a>
+            </li>
+            <li class="list-inline-item">
+              <a (click)="downloadMyFile('las')">.las</a>
+            </li>
+            <li class="list-inline-item">
+              <a (click)="downloadMyFile('dxf')">.dxf</a>
+            </li>
+            <li class="list-inline-item"><img src="" alt=""> <a href="#"></a></li>
+          </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
